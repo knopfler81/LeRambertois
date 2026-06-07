@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Le Rambertois Grill — Restaurant turc authentique à Saint-Just-Saint-Rambert. Grillades au feu de bois, cuisine turque traditionnelle, terrasse conviviale." />
+  <title>Le Rambertois Grill — Saint-Just-Saint-Rambert</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo" aria-label="Le Rambertois, accueil">
+      <img src="rambertoisLogo.png" alt="Logo Le Rambertois Grill" />
+      <div class="nav-logo-text">
+        Le Rambertois
+        <span>Grill · Saint-Just-Saint-Rambert</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#infos">Infos</a></li>
+      <li><a href="#contact">Nous trouver</a></li>
+    </ul>
+
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="menu">
+    <a href="#menu"    role="menuitem">Menu</a>
+    <a href="#infos"   role="menuitem">Infos pratiques</a>
+    <a href="#contact" role="menuitem">Nous trouver</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" aria-label="Accueil">
+    <div class="hero-bg"></div>
+    <div class="embers" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Logo grand format à la place du titre -->
+      <img src="rambertoisLogo.png" alt="Le Rambertois Grill" class="hero-logo" />
+
+      <div class="hero-tag" aria-hidden="true">Cuisine turque · Feu de bois · Saint-Just-Saint-Rambert</div>
+
+      <p>
+        Grillades au feu de bois, mezzés généreux,<br>
+        une table chaleureuse au cœur de la Loire.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#menu"    class="btn-primary">Voir la carte</a>
+        <a href="#contact" class="btn-secondary">Nous trouver</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">Découvrir</div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       MENU
+  ═══════════════════════════════════════ -->
+  <section id="menu" aria-labelledby="menu-title">
+    <div class="container">
+      <span class="section-label reveal">Notre carte</span>
+      <h2 class="section-title reveal" id="menu-title">
+        Des plats <span class="accent">préparés avec soin</span>
+      </h2>
+      <div class="divider reveal"></div>
+
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Catégories du menu"></div>
+      <div id="menuLoading" class="menu-loading" aria-live="polite">Chargement de la carte…</div>
+      <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       INFOS
+  ═══════════════════════════════════════ -->
+  <section id="infos" aria-labelledby="infos-title">
+    <div class="container">
+      <span class="section-label reveal">Infos pratiques</span>
+      <h2 class="section-title reveal" id="infos-title">
+        Tout ce qu'il faut <span class="accent">savoir</span>
+      </h2>
+      <div class="divider reveal"></div>
+
+      <div class="infos-grid">
+
+        <div class="info-card reveal">
+          <span class="info-icon" aria-hidden="true">🕐</span>
+          <h3>Horaires d'ouverture</h3>
+          <ul class="horaires-list">
+            <li><span class="jour">Lundi</span>    <span class="ferme">Fermé</span></li>
+            <li><span class="jour">Mardi</span>    <span>11h30 – 15h · 18h30 – 23h</span></li>
+            <li><span class="jour">Mercredi</span> <span>11h30 – 15h · 18h30 – 23h</span></li>
+            <li><span class="jour">Jeudi</span>    <span>11h30 – 15h · 18h30 – 23h</span></li>
+            <li><span class="jour">Vendredi</span> <span>11h30 – 15h · 18h30 – 23h</span></li>
+            <li><span class="jour">Samedi</span>   <span>11h30 – 15h · 18h30 – 23h</span></li>
+            <li><span class="jour">Dimanche</span> <span>11h30 – 15h · 18h30 – 23h</span></li>
+          </ul>
+          <p style="margin-top:0.8rem;font-size:0.75rem;color:rgba(201,168,76,0.4);font-style:italic;">
+            Horaires susceptibles de varier.
+          </p>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="info-icon" aria-hidden="true">📍</span>
+          <h3>Adresse</h3>
+          <address>
+            13, boulevard de la Libération<br>
+            42170 Saint-Just-Saint-Rambert<br><br>
+            <a href="tel:0785166833" id="infoTel">07 85 16 68 33</a><br><br>
+            <a href="https://maps.google.com/?q=Le+Rambertois+Grill+Saint-Just-Saint-Rambert"
+               target="_blank" rel="noopener">
+              Ouvrir dans Google Maps →
+            </a>
+          </address>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="info-icon" aria-hidden="true">🔥</span>
+          <h3>Le restaurant</h3>
+          <p>
+            Cuisine turque au feu de bois. Mezzés, plats du jour, petits déjeuners, plats traditionnels.
+            Tables de barbecue pour cuire sa propre viande.<br><br>
+            Terrasse 50 couverts · Salle 70 couverts.<br>
+            Idéal en famille ou entre amis.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <span class="section-label reveal">Nous trouver</span>
+      <h2 class="section-title reveal" id="contact-title">Venez nous rendre visite</h2>
+      <div class="divider reveal"></div>
+
+      <p class="reveal">
+        Réservation recommandée le week-end.<br>
+        Contactez-nous par téléphone ou venez directement.
+      </p>
+
+      <div class="contact-actions reveal">
+        <a href="tel:0785166833" class="btn-primary">📞 07 85 16 68 33</a>
+        <a href="https://maps.google.com/?q=13+Boulevard+de+la+Liberation+Saint-Just-Saint-Rambert"
+           target="_blank" rel="noopener" class="btn-secondary">Itinéraire</a>
+      </div>
+
+      <div class="map-container reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.8!2d4.2394!3d45.5037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5a3b6e4e4e4e4%3A0x0!2s13+Boulevard+de+la+Lib%C3%A9ration%2C+42170+Saint-Just-Saint-Rambert!5e0!3m2!1sfr!2sfr!4v1234567890"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Carte Le Rambertois Grill">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo-wrap">
+      <img src="logo.png" alt="" aria-hidden="true" />
+      <span>Le Rambertois Grill</span>
+    </div>
+    <p>13 bd de la Libération · 42170 Saint-Just-Saint-Rambert · 07 85 16 68 33</p>
+    <p style="margin-top:0.5rem;">© <span id="year"></span> Le Rambertois Grill — Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
