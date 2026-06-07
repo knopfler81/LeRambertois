@@ -34,23 +34,23 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Braises ──
-// function createEmbers() {
-//   const c = document.querySelector('.embers');
-//   if (!c) return;
-//   for (let i = 0; i < 16; i++) {
-//     const e = document.createElement('div');
-//     e.className = 'ember';
-//     const sz = 2 + Math.random() * 2.5;
-//     e.style.cssText = `
-//       left:${Math.random()*100}%;
-//       width:${sz}px; height:${sz}px;
-//       animation-duration:${4+Math.random()*7}s;
-//       animation-delay:${Math.random()*9}s;
-//       --drift:${(Math.random()-.5)*100}px;
-//     `;
-//     c.appendChild(e);
-//   }
-// }
+function createEmbers() {
+  const c = document.querySelector('.embers');
+  if (!c) return;
+  for (let i = 0; i < 16; i++) {
+    const e = document.createElement('div');
+    e.className = 'ember';
+    const sz = 2 + Math.random() * 2.5;
+    e.style.cssText = `
+      left:${Math.random()*100}%;
+      width:${sz}px; height:${sz}px;
+      animation-duration:${4+Math.random()*7}s;
+      animation-delay:${Math.random()*9}s;
+      --drift:${(Math.random()-.5)*100}px;
+    `;
+    c.appendChild(e);
+  }
+}
 createEmbers();
 
 // ── Reveal ──
